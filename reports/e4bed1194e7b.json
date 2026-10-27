@@ -1,0 +1,51 @@
+{
+  "task_spec": "Repair the application so it imports the required library. The installed version is incompatible (ImportError on version mismatch).",
+  "impossibility_forks": [
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "from broken_pkg.alpha import foo"
+      ],
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'broken_pkg'\n",
+      "exit_code": 1,
+      "fork_id": "37b16a03-c6da-424c-909f-64aa3051382c",
+      "base_checkpoint": "6464ae99-6f00-4d6b-91cb-a4dbaa0456a3"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "from broken_pkg.beta import bar"
+      ],
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'broken_pkg'\n",
+      "exit_code": 1,
+      "fork_id": "1ac46df3-f6a1-449d-baac-4922c70b5ca5",
+      "base_checkpoint": "6464ae99-6f00-4d6b-91cb-a4dbaa0456a3"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "from broken_pkg.gamma import baz"
+      ],
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'broken_pkg'\n",
+      "exit_code": 1,
+      "fork_id": "21a4117d-29b6-4e0b-a7b0-cf05ba96aea1",
+      "base_checkpoint": "6464ae99-6f00-4d6b-91cb-a4dbaa0456a3"
+    }
+  ],
+  "checkpoints": [
+    "6464ae99-6f00-4d6b-91cb-a4dbaa0456a3"
+  ],
+  "verdict": "IMPOSSIBLE",
+  "blocker_signature": "ModuleNotFoundError",
+  "generated_at": "2026-10-27T09:15:01.294716+00:00",
+  "certificate_hash": "e4bed1194e7b71d263c2a54eb2f85901c249335f9bc01fbcba50b738bf16b429"
+}

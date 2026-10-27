@@ -1,0 +1,51 @@
+{
+  "task_spec": "Repair the application so it reads its configuration. The required API_KEY environment variable is missing.",
+  "impossibility_forks": [
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('401 Unauthorized\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "401 Unauthorized\n",
+      "exit_code": 1,
+      "fork_id": "e96ef407-b701-4fb0-a64c-712e009fb9fe",
+      "base_checkpoint": "a6bc8b2a-3552-42aa-99e0-f4e38aad743c"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('401 Unauthorized\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "401 Unauthorized\n",
+      "exit_code": 1,
+      "fork_id": "e7d4ada1-3cc4-45d9-bfd3-8eaa8b72bb9a",
+      "base_checkpoint": "a6bc8b2a-3552-42aa-99e0-f4e38aad743c"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('401 Unauthorized\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "401 Unauthorized\n",
+      "exit_code": 1,
+      "fork_id": "e61d1113-cef8-49b9-8c63-86b03d2d1bff",
+      "base_checkpoint": "a6bc8b2a-3552-42aa-99e0-f4e38aad743c"
+    }
+  ],
+  "checkpoints": [
+    "a6bc8b2a-3552-42aa-99e0-f4e38aad743c"
+  ],
+  "verdict": "IMPOSSIBLE",
+  "blocker_signature": "401",
+  "generated_at": "2026-10-27T09:07:28.274082+00:00",
+  "certificate_hash": "d90e68b7b28e3f771ca0f4dd1f79a6909e335063bb16c8e7680bcedc3a8405fe"
+}

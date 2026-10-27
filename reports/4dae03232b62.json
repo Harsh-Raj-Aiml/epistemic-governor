@@ -1,0 +1,51 @@
+{
+  "task_spec": "Repair the application so it calls the required API endpoint. The endpoint returns 404 Not Found.",
+  "impossibility_forks": [
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('404 Not Found\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "404 Not Found\n",
+      "exit_code": 1,
+      "fork_id": "18ac5550-b0a8-4f2c-8c93-30206fe69520",
+      "base_checkpoint": "28e26e53-f3c0-46cd-ad26-425dd5522e9a"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('404 Not Found\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "404 Not Found\n",
+      "exit_code": 1,
+      "fork_id": "fae6fa3a-99c1-4660-a659-2e265d867dd3",
+      "base_checkpoint": "28e26e53-f3c0-46cd-ad26-425dd5522e9a"
+    },
+    {
+      "hypothesis": "run python",
+      "command": "python",
+      "args": [
+        "-c",
+        "import sys; sys.stderr.write('404 Not Found\\n'); sys.exit(1)"
+      ],
+      "stdout": "",
+      "stderr": "404 Not Found\n",
+      "exit_code": 1,
+      "fork_id": "00ca261a-d98a-430a-be42-440e6ef9dfc5",
+      "base_checkpoint": "28e26e53-f3c0-46cd-ad26-425dd5522e9a"
+    }
+  ],
+  "checkpoints": [
+    "28e26e53-f3c0-46cd-ad26-425dd5522e9a"
+  ],
+  "verdict": "IMPOSSIBLE",
+  "blocker_signature": "404",
+  "generated_at": "2026-10-27T09:07:20.835445+00:00",
+  "certificate_hash": "4dae03232b629df0b4199f8a05523aa7689642a0d28408bb9482e6f53d1c864f"
+}
